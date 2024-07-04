@@ -1,5 +1,0 @@
-{{- range $i := until (.Values.instances | int) }}
-      retry_join {
-        leader_api_addr = "http://vault-{{ $i }}.vault-internal:8200"
-      }
-    {{- end }}
