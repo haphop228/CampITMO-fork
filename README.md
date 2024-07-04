@@ -22,12 +22,10 @@
 
 ### Ментор
 
-tg: @KotDimos
+Tg: @KotDimos
 
 ---
 
 ### Работаем с приложение на flask, ниже ссылка
 
 - [Flask-приложение](https://gitfront.io/r/deusops/Fsjok1dx89xG/flask-project-01/)
-
-TODO Перенести ссылки из тг чата
