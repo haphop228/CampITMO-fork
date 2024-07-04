@@ -24,6 +24,10 @@ resources:
     size: "10Gi"
 
 
+injector:
+  enabled: true
+
+
 
 serviceAccount:
   # Specifies whether a service account should be created

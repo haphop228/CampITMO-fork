@@ -5,7 +5,18 @@ metadata:
   namespace: {{ .Values.namespace }}
   labels:
     app: app
+  annotations:
+    deployment.kubernetes.io/revision: "2"
+    vault.hashicorp.com/agent-inject: "true"
+    vault.hashicorp.com/agent-inject-secret-helloworld: secret/data/secret/secret
+    vault.hashicorp.com/agent-inject-template-helloworld: |
+      {{- with secret "secret/data/secret/secret" -}}
+      {{ .Data.data.password }}
+      {{- end }}
+    vault.hashicorp.com/role: app
 spec:
+  progressDeadlineSeconds: 600
+  revisionHistoryLimit: 10
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
@@ -14,6 +25,14 @@ spec:
     metadata:
       labels:
         app: app
+      annotations:
+        vault.hashicorp.com/agent-inject: "true"
+        vault.hashicorp.com/agent-inject-secret-helloworld: secret/data/secret/secret
+        vault.hashicorp.com/agent-inject-template-helloworld: |
+          {{- with secret "secret/data/secret/secret" -}}
+          {{ .Data.data.password }}
+          {{- end }}
+        vault.hashicorp.com/role: app
     spec:
       containers:
       - name: app

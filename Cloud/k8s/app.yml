@@ -3,6 +3,21 @@ kind: Namespace
 metadata:
   name: app
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app
+  labels:
+    app: app
+spec:
+  selector:
+    app: app
+  ports:
+    - name: http
+      port: 8000
+      protocol: TCP
+      targetPort: 8000
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -10,6 +25,15 @@ metadata:
   namespace: app
   labels:
     app: app
+  annotations:
+    deployment.kubernetes.io/revision: "2"
+    vault.hashicorp.com/agent-inject: "true"
+    vault.hashicorp.com/agent-inject-secret-helloworld: secret/data/secret/secret
+    vault.hashicorp.com/agent-inject-template-helloworld: |
+      {{- with secret "secret/data/secret/secret" -}}
+      {{ .Data.data.password }}
+      {{- end }}
+    vault.hashicorp.com/role: app
 spec:
   replicas: 1
   selector:
@@ -19,10 +43,19 @@ spec:
     metadata:
       labels:
         app: app
+      annotations:
+        vault.hashicorp.com/agent-inject: "true"
+        vault.hashicorp.com/agent-inject-secret-helloworld: secret/data/secret/secret
+        vault.hashicorp.com/agent-inject-template-helloworld: |
+          {{- with secret "secret/data/secret/secret" -}}
+          {{ .Data.data.password }}
+          {{- end }}
+        vault.hashicorp.com/role: app
     spec:
       containers:
       - name: app
-        image: cr.yandex/crp0irehbbj1n4pd0tf1/flask-app:v6
+        image: cr.yandex/crp0irehbbj1n4pd0tf1/flask-app:v7
+        imagePullPolicy: Always
         ports:
           - containerPort: 8000
             name: "http-server"
