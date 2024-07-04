@@ -1,4 +1,4 @@
-# Service for Vault cluster
+# Vault cluster
 apiVersion: v1
 kind: Service
 metadata:
@@ -12,8 +12,6 @@ metadata:
   annotations:
 
 spec:
-  # We want the servers to become available even if they're not ready
-  # since this DNS is also used for join operations.
   publishNotReadyAddresses: true
   ports:
     - name: http

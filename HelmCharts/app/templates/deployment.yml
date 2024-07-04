@@ -52,3 +52,4 @@ spec:
             value: {{ .Values.env.databaseHost }}
           - name: DATABASE_URI
             value: {{ .Values.env.databaseUri }}
+---

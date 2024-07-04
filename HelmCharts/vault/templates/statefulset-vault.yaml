@@ -1,5 +1,4 @@
 ---
-# TODO -- delete
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -10,8 +9,6 @@ metadata:
     app.kubernetes.io/instance: vault
     app.kubernetes.io/managed-by: Helm
 ---
-# -->
-# Source: vault/templates/server-discovery-role.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
@@ -27,8 +24,6 @@ rules:
   resources: ["pods"]
   verbs: ["get", "watch", "list", "update", "patch"]
 ---
-# Source: vault/templates/server-statefulset.yaml
-# StatefulSet to run the actual vault server cluster.
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:

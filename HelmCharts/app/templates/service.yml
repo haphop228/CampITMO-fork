@@ -10,3 +10,19 @@ spec:
     app: postgres
   ports:
     - port: {{ .Values.postgres.servicePort }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app
+  labels:
+    app: app
+spec:
+  selector:
+    app: app
+  ports:
+    - name: http
+      port: {{ .Values.service.port }}
+      protocol: TCP
+      targetPort: {{ .Values.service.targetPort }}
+---
