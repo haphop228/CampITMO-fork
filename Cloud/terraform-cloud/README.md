@@ -4,16 +4,16 @@
 
 ## Основные команды для запуска кластера и работы с ним:
 
--`terraform init`
+- `terraform init`
 Эта команда инициализирует рабочую директорию Terraform.
 
--`terraform plan`
+- `terraform plan`
 Команда terraform plan создает план выполнения, который показывает, какие изменения будут внесены в инфраструктуру.
 
--`terraform apply`
+- `terraform apply`
 Команда terraform apply применяет изменения, описанные в файлах конфигурации.
 
--`terraform destroy`
+- `terraform destroy`
 Команда terraform destroy удаляет все ресурсы, описанные в конфигурации.
 
 ### Документация
