@@ -3,12 +3,16 @@
 Файлы для [terraform](https://www.terraform.io/) для автоматического создания [пользователей с методом аутентификации `userpass`](https://developer.hashicorp.com/vault/docs/auth) и создания [политик](https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-policies), ограничивающих доступ этих пользователей к заданным ресурсам в [`kv engine`](https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-secrets-engines).
 
 ## Основные команды для запуска кластера и работы с ним:
+
 -`terraform init`
 Эта команда инициализирует рабочую директорию Terraform.
+
 -`terraform plan`
 Команда terraform plan создает план выполнения, который показывает, какие изменения будут внесены в инфраструктуру.
+
 -`terraform apply`
 Команда terraform apply применяет изменения, описанные в файлах конфигурации.
+
 -`terraform destroy`
 Команда terraform destroy удаляет все ресурсы, описанные в конфигурации.
 
