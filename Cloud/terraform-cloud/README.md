@@ -24,4 +24,5 @@
 
 ### Полезные ссылки
 [Примеры конфигов](https://github.com/terraform-yc-modules/terraform-yc-kubernetes)
+
 [Видео по настройке yandex cloud](https://youtu.be/y1eqR0xL1ZI?si=06fCzdWU0L6vGtZZ)
