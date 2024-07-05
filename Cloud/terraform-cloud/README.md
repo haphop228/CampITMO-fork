@@ -19,10 +19,11 @@
 ### Документация
 - https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs
 - https://yandex.cloud/en-ru/docs/tutorials/infrastructure-management/terraform-quickstart
+
 Рекомендую использовать сайт terraform, в нём больше подробностей и в основном в настройке, я пользовался именно им.
 
 
 ### Полезные ссылки
-[Примеры конфигов](https://github.com/terraform-yc-modules/terraform-yc-kubernetes)
+- [Примеры конфигов](https://github.com/terraform-yc-modules/terraform-yc-kubernetes)
 
-[Видео по настройке yandex cloud](https://youtu.be/y1eqR0xL1ZI?si=06fCzdWU0L6vGtZZ)
+- [Видео по настройке yandex cloud](https://youtu.be/y1eqR0xL1ZI?si=06fCzdWU0L6vGtZZ)
