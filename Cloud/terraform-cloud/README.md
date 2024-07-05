@@ -20,7 +20,7 @@
 - https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs
 - https://yandex.cloud/en-ru/docs/tutorials/infrastructure-management/terraform-quickstart
 
-Рекомендую использовать сайт terraform, в нём больше подробностей и в основном в настройке, я пользовался именно им.
+Рекомендую использовать сайт terraform, в нём больше подробностей, и в основном в настройке я пользовался именно им.
 
 
 ### Полезные ссылки
