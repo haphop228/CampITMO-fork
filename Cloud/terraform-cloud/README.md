@@ -2,18 +2,15 @@
 
 Файлы для [terraform](https://www.terraform.io/) для автоматического создания [пользователей с методом аутентификации `userpass`](https://developer.hashicorp.com/vault/docs/auth) и создания [политик](https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-policies), ограничивающих доступ этих пользователей к заданным ресурсам в [`kv engine`](https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-secrets-engines).
 
-## Основные команды для инициализации 
+## Основные команды для запуска кластера и работы с ним:
 -`terraform init`
-Эта команда инициализирует рабочую директорию Terraform. Она загружает необходимые провайдеры и модули, которые нужны для работы с облачной инфраструктурой. В нашем случае, это провайдер Yandex Cloud.
+Эта команда инициализирует рабочую директорию Terraform.
 -`terraform plan`
-
-Команда terraform plan создает план выполнения, который показывает, какие изменения будут внесены в инфраструктуру. Это позволяет вам проверить и утвердить изменения перед их применением.
--`terraform apply`:
-
-Команда terraform apply применяет изменения, описанные в файлах конфигурации. Terraform создает, изменяет и удаляет ресурсы в соответствии с конфигурацией.
--`terraform destroy`:
-
-Команда terraform destroy удаляет все ресурсы, описанные в конфигурации. Это полезно для очистки всей инфраструктуры.
+Команда terraform plan создает план выполнения, который показывает, какие изменения будут внесены в инфраструктуру.
+-`terraform apply`
+Команда terraform apply применяет изменения, описанные в файлах конфигурации.
+-`terraform destroy`
+Команда terraform destroy удаляет все ресурсы, описанные в конфигурации.
 
 ### Prerequesties
 
